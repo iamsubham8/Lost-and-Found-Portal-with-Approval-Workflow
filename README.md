@@ -75,23 +75,3 @@ A comprehensive web application for managing lost and found items with an approv
 2. **Approved**: Items approved by moderators and visible to public
 3. **Claimed**: Items claimed by their owners
 4. **Rejected**: Items rejected by moderators
-
-## File Structure
-
-lost-found-portal/
-├── client/                 # React frontend
-│   ├── public/
-│   ├── src/
-│   │   ├── components/     # React components
-│   │   ├── App.js         # Main app component
-│   │   ├── index.js       # Entry point
-│   │   └── index.css      # Global styles
-│   └── package.json
-├── server/                # Express backend
-│   ├── uploads/           # File upload directory
-│   ├── index.js          # Server entry point
-│   ├── package.json
-│   └── .env              # Environment variables
-├── package.json          # Root package.json
-└── README.md
-```
