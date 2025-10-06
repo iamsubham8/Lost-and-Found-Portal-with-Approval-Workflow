@@ -10,7 +10,7 @@ A comprehensive web application for managing lost and found items with an approv
 - **Claim System**: Users can claim items they've lost
 - **Admin Dashboard**: Complete moderation interface with statistics
 - **Notification System**: Real-time notifications for all actions
-- **Responsive Design**: Works on desktop and mobile devices
+
 
 ## Tech Stack
 
@@ -18,8 +18,7 @@ A comprehensive web application for managing lost and found items with an approv
 - Node.js with Express.js
 - SQLite database
 - Multer for file uploads
-- CORS for cross-origin requests
-- UUID for unique identifiers
+
 
 ### Frontend
 - React with React Router
@@ -27,27 +26,11 @@ A comprehensive web application for managing lost and found items with an approv
 - React Toastify for notifications
 - Responsive CSS with modern design
 
-## Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd lost-found-portal
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm run install-all
-   ```
-
-3. **Start the development servers**
-   ```bash
-   npm run dev
-   ```
 
    This will start:
    - Backend server on http://localhost:5000
    - React frontend on http://localhost:3000
+
 
 ## Usage
 
@@ -79,38 +62,6 @@ A comprehensive web application for managing lost and found items with an approv
 
 ## API Endpoints
 
-### Public Endpoints
-- `GET /api/items` - Get approved items
-- `GET /api/items/:id` - Get specific item
-- `POST /api/items` - Submit new item
-- `PUT /api/items/:id/claim` - Claim an item
-
-### Admin Endpoints
-- `GET /api/admin/items` - Get all items (including pending)
-- `PUT /api/admin/items/:id/approve` - Approve item
-- `PUT /api/admin/items/:id/reject` - Reject item
-- `POST /api/admin/login` - Admin login
-- `GET /api/notifications` - Get system notifications
-
-## Database Schema
-
-### Items Table
-- `id` - Unique identifier
-- `title` - Item title
-- `description` - Detailed description
-- `category` - Item category
-- `location_found` - Where it was found
-- `date_found` - When it was found
-- `contact_info` - Reporter's contact
-- `image_url` - Photo URL
-- `status` - pending_approval/approved/claimed/rejected
-- `claimed_by` - Claimant name
-- `claimant_contact` - Claimant contact
-- `claimed_date` - When it was claimed
-- `created_at` - Submission timestamp
-- `approved_at` - Approval timestamp
-- `approved_by` - Moderator who approved
-
 ### Moderators Table
 - `id` - Unique identifier
 - `username` - Login username
@@ -127,7 +78,6 @@ A comprehensive web application for managing lost and found items with an approv
 
 ## File Structure
 
-```
 lost-found-portal/
 ├── client/                 # React frontend
 │   ├── public/
@@ -145,41 +95,3 @@ lost-found-portal/
 ├── package.json          # Root package.json
 └── README.md
 ```
-
-## Development
-
-### Running Individual Services
-
-- **Backend only**: `npm run server`
-- **Frontend only**: `npm run client`
-- **Both**: `npm run dev`
-
-### Building for Production
-
-```bash
-npm run build
-```
-
-## Security Notes
-
-- The current implementation uses simple password authentication for demo purposes
-- In production, implement proper authentication with JWT tokens
-- Add input validation and sanitization
-- Implement rate limiting
-- Use HTTPS in production
-- Store files in a secure cloud storage service
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## License
-
-MIT License - see LICENSE file for details
-
-
-
